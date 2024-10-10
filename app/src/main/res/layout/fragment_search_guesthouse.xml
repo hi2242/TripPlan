@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_layout"
+        android:layout_width="0dp"
+        android:layout_height="310dp"
+        android:background="@drawable/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="40dp"
+            android:text="게스트하우스 검색"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/GuestHouse_deco_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_dia"
+            app:layout_constraintStart_toEndOf="@+id/GuestHouse_deco_3"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/GuestHouse_deco_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_cube"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/GuestHouse_deco_1" />
+
+        <ImageView
+            android:id="@+id/GuestHouse_deco_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_cube"
+            app:layout_constraintBottom_toTopOf="@+id/GuestHouse_deco_6"
+            app:layout_constraintStart_toEndOf="@+id/GuestHouse_deco_6"
+            app:srcCompat="@drawable/ic_plus" />
+
+        <ImageView
+            android:id="@+id/GuestHouse_deco_4"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="55dp"
+            android:src="@drawable/ic_cube"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GuestHouse_deco_5" />
+
+        <ImageView
+            android:id="@+id/GuestHouse_deco_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="96dp"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/GuestHouse_deco_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginBottom="7dp"
+            android:text="직접 매칭을 통해 \n내 게스트는 내가 정한다!"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/GuestHouse_search_text"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/GuestHouse_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="48dp"
+            android:text="게하 정보 검색"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:autofillHints="검색어를 입력하세요."
+        android:background="@drawable/rounded_rectangle_background"
+        android:elevation="10dp"
+        android:queryHint="검색어를 입력하세요."
+        android:textSize="20sp"
+        android:iconifiedByDefault="false"
+        app:layout_constraintBottom_toTopOf="@id/list_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_layout">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="54dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_jeju"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                style="@style/CustomChipStyle"
+                android:text="제주"
+                android:visibility="invisible"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/GuestHouse_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="35dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_group"
+            tools:itemCount="4"
+            tools:listitem="@layout/layout_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

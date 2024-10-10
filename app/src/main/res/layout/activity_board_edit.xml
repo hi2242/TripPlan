@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".board.BoardEditActivity">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/scroll">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="게시글 수정"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/scroll"
+            app:layout_constraintTop_toBottomOf="@id/linear1" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/editBtn"
+            app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/titleArea"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="15dp"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_border"
+                    android:hint="제목을 입력해주세요"
+                    app:layout_constraintBottom_toTopOf="@+id/contentArea"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/contentArea"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="15dp"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_border"
+                    android:hint="내용을 입력해주세요"
+                    app:layout_constraintBottom_toTopOf="@+id/imageArea"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleArea" />
+
+                <ImageView
+                    android:id="@+id/imageArea"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/rounded_border"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add"
+                    app:layout_constraintBottom_toTopOf="@id/urlArea"
+                    app:layout_constraintHorizontal_bias="0.448"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/contentArea" />
+
+                <EditText
+                    android:id="@+id/urlArea"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="15dp"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_border"
+                    app:layout_constraintTop_toBottomOf="@id/imageArea"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:hint="URL 첨부" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/view_border"
+            android:text="수정하기"
+            app:layout_constraintTop_toBottomOf="@+id/scroll"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

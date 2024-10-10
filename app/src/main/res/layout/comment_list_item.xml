@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 닉네임 표시 -->
+    <TextView
+        android:id="@+id/nicknameArea2"
+        android:text="닉네임"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- 댓글 내용 표시 -->
+    <TextView
+        android:id="@+id/commentArea2"
+        android:text="댓글"
+        android:textSize="20sp"
+        android:layout_margin="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- 작성 시간 표시 -->
+    <TextView
+        android:id="@+id/timeArea2"
+        android:text="시간"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

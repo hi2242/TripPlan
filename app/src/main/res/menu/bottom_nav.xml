@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="홈"
+        android:id="@+id/home"
+        android:icon="@drawable/home"/>
+    <item android:title="매칭 기록"
+        android:id="@+id/chat"
+        android:icon="@drawable/history"/>
+    <item android:title="내 정보"
+        android:id="@+id/info"
+        android:icon="@drawable/information"/>
+
+</menu>

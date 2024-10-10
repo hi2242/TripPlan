@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="1dp"/> <!-- 경계선의 높이 -->
+    <solid android:color="@color/black"/> <!-- 경계선 색상 -->
+</shape>

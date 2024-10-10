@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "564011904442",
+    "project_id": "tripplan-68bfa",
+    "storage_bucket": "tripplan-68bfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564011904442:android:985b0db1f80432a4000183",
+        "android_client_info": {
+          "package_name": "com.example.tripplan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFLoBR8XyZMJ6b9q-_m43spMeC-rOE69s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

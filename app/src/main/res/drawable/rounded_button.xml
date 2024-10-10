@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 버튼의 배경색 -->
+    <solid android:color="#000000" />
+    <!-- 모서리 반경 설정 -->
+    <corners android:radius="16dp" />
+</shape>
