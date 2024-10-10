@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_container"
+    tools:context=".fragment.Info">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 상단 바: 타이틀 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/titleArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="마이페이지"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- 아이디와 닉네임을 개별 레이아웃으로 분리 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 프로필 이미지 -->
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/circle_border"
+                android:scaleType="centerCrop"
+                android:src="@drawable/information" />
+
+            <!-- 아이디와 닉네임을 개별 레이아웃으로 분리 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 아이디와 닉네임을 감싸는 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/userEmailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="아이디"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="user@example.com"
+                        android:textColor="#999999"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- 경계선 추가 -->
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:background="@drawable/separator" />
+
+                <!-- 닉네임 영역 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/userNickText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="닉네임"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/userNick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nickname"
+                        android:textColor="#999999"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 개인 정보 수정과 문의하기를 개별 레이아웃으로 분리 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 개인정보수정과 문의하기를 감싸는 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.widget.Button
+                        android:id="@+id/btnEditInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="개인정보 수정"
+                        android:textStyle="bold"
+                        android:background="#FFFFFF"
+                        android:textSize="16sp"
+                        android:drawableEnd="@drawable/forward"
+                        android:drawablePadding="8dp"
+                        android:padding="8dp"
+                        android:gravity="start|center_vertical"/>
+
+                </LinearLayout>
+
+                <!-- 경계선 추가 -->
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:background="@drawable/separator" />
+
+                <!-- 닉네임 영역 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.widget.Button
+                        android:id="@+id/btnInquire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="문의하기"
+                        android:textStyle="bold"
+                        android:background="#FFFFFF"
+                        android:textSize="16sp"
+                        android:drawableEnd="@drawable/forward"
+                        android:drawablePadding="8dp"
+                        android:padding="8dp"
+                        android:gravity="start|center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <android.widget.Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="로그아웃"
+                    android:background="@android:color/white"
+                    android:textSize="16sp"
+                    android:textColor="#999999"
+                    android:padding="16dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:id="@+id/middleLine"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"/>
+
+                <android.widget.Button
+                    android:id="@+id/btnWithdraw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="회원 탈퇴"
+                    android:background="@android:color/white"
+                    android:textSize="16sp"
+                    android:textColor="#999999"
+                    android:padding="16dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

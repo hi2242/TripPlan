@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.History">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border_black"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/titleArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="매칭"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <!-- 상대방 닉네임 -->
+                <TextView
+                    android:id="@+id/partnerNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="상대방: 닉네임"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- 궁합도 제목 -->
+                <TextView
+                    android:id="@+id/compatibilityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="궁합도 점수"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- 궁합도 ProgressBar -->
+                <ProgressBar
+                    android:id="@+id/compatibilityProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:max="100"
+                    android:progress="0" />
+
+                <!-- 궁합도 점수 -->
+                <TextView
+                    android:id="@+id/compatibilityScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="궁합도: %"
+                    android:textSize="18sp" />
+
+                <!-- 궁합도 설명 -->
+                <TextView
+                    android:id="@+id/compatibilityDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="궁합도 설명"
+                    android:textSize="16sp" />
+
+                <!-- 매칭 상대방의 정보 -->
+                <TextView
+                    android:id="@+id/partnerInfoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="상대방 정보"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- 상대방의 MBTI -->
+                <TextView
+                    android:id="@+id/partnerMbti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="MBTI: XXXX"
+                    android:textSize="16sp" />
+
+                <!-- 상대방의 나이 -->
+                <TextView
+                    android:id="@+id/partnerAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="나이: 25"
+                    android:textSize="16sp" />
+
+                <!-- 상대방의 여행 스타일 -->
+                <TextView
+                    android:id="@+id/partnerTravelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="여행 스타일: 자유여행"
+                    android:textSize="16sp" />
+
+                <!-- 상대방의 여행 기간 -->
+                <TextView
+                    android:id="@+id/partnerTravelPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="여행 기간: 5일"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnMatching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="138dp"
+            android:layout_marginBottom="10dp"
+            android:text="그대로 매칭하기"
+            app:layout_constraintBottom_toTopOf="@+id/btnRetryMatching"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+        <Button
+            android:id="@+id/btnRetryMatching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="121dp"
+            android:layout_marginBottom="49dp"
+            android:text="다른 상대와 매칭하기"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMatching" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

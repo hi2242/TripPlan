@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tripplan"
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 인터넷 사용 권한 설정-->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 이미지 업로드 권한 설정-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 파일 쓰기 권한 설정-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <queries>
+        <intent>
+            <action android:name="com.onestore.ipc.iap.IapService.ACTION" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="onestore" />
+        </intent>
+    </queries>
     <application
         android:name=".loginForKakao"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_appicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_appicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TripPlan"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".activity.MainSplashActivity"
+            android:exported="true"
+            android:launchMode="standard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
@@ -38,6 +57,33 @@
                     android:scheme="@string/KAKAO_OAUTH_HOST" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.HomeActivity"></activity>
+        <activity
+            android:name=".loginForAdmin"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.MatchingActivity"></activity>
+        <activity android:name=".board.BoardWriteActivity"></activity>
+        <activity android:name=".board.BoardInsideActivity"></activity>
+        <activity android:name=".fragment.GuestInsideActivity"></activity>
+        <activity android:name=".board.BoardEditActivity"></activity>
+        <activity android:name=".board.WebViewActivity"></activity>
+        <activity android:name=".activity.SearchActivity"></activity>
+        <activity android:name=".activity.SubmitGuestActivity"></activity>
+        <activity android:name=".activity.SplashHomeActivity"></activity>
+        <activity android:name=".activity.MatchingGuestActivity"></activity>
+        <activity android:name=".activity.GuestHistoryActivity"></activity>
+        <activity android:name=".activity.PrivateInformationActivity"></activity>
+        <activity
+            android:name=".activity.EditInfoActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activity.InquiryActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".activity.HistoryActivity"></activity>
+        <activity android:name=".activity.FirstUserInfoActivity"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>

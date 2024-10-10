@@ -1,3 +1,166 @@
 <resources>
     <string name="app_name">TripPlan</string>
+    <string name="editId_hint"><font size="14">이메일 형식으로 입력</font></string>
+    <string name="editPass_hint"><font size="14">8~15자 영문/숫자 조합으로 입력</font></string>
+    <string name="editNick_hint"><font size="14">한글로 입력</font></string>
+    <string name="editPhone_hint"><font size="14">- 제외 휴대폰 번호</font></string>
+    <string name="editExplain_hint"><font size="14">기관과 소속에 대한 설명</font></string>
+    <string name="editMoney_hint"><font size="14">숫자만 입력(단위: 만원)</font></string>
+    <string name="editAge_hint"><font size="14">숫자만 입력(단위: 세)</font></string>
+    <string name="etAge_hint"><font size="14">생년월일 선택</font></string>
+    <string name="editKakao_hint"><font size="14">영문/숫자 조합으로 입력</font></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="help_icon_desc_mate">- 여행 메이트 찾기 서비스는 짝수 번째 주 토요일에 목적지/여행 일자가 동일한 사람과 매칭을 해주는
+    서비스 입니다.\n\n- 발급 일자가 3개월 이내인 범죄 경력 회보서를 통해 보다 안전하게 매칭된 상대와 카카오톡 아이디 교환을 통해 연락을 주고 받을 수 있습니다.</string>
+    <string name="help_icon_desc_guest">- 게스트 메이트 찾기 서비스는 3일의 유효 기간을 갖는 게스트 모집 글이 자동으로 생성됩니다.
+        \n\n- 발급 일자가 3개월 이내인 범죄 경력 회보서를 통해 나의 모집 글에 신청한 보다 안전한 상대들 중 내가 원하는 게스트 메이트를 선택할 수
+     있습니다.</string>
+    <string name="help_icon_desc_submit">- 맘에 드는 게스트 메이트를 찾았다면 신청서를 작성하여 상대방의 연락을 기다립니다.\n\n
+    - 모집 글은 3일의 유효 기간이 있기 때문에 유효 기간이 지난다면 상대가 거절했을 수 있으므로 다른 게스트 메이트를 찾아보세요.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="genders">
+        <item>무관</item>
+        <item>남성</item>
+        <item>여성</item>
+    </string-array>
+    <string-array name="regions">
+        <item>지역 선택</item>
+        <item>서울</item>
+        <item>경기</item>
+        <item>인천</item>
+        <item>강원</item>
+        <item>제주</item>
+        <item>대전</item>
+        <item>충북</item>
+        <item>충남/세종</item>
+        <item>부산</item>
+        <item>울산</item>
+        <item>경남</item>
+        <item>대구</item>
+        <item>경북</item>
+        <item>광주</item>
+        <item>전남</item>
+        <item>전주/전북</item>
+    </string-array>
+    <string-array name="CITY">
+        <item>도시 선택</item>
+        <item>서울</item>
+        <item>인천</item>
+        <item>대전</item>
+        <item>대구</item>
+        <item>광주</item>
+        <item>부산</item>
+        <item>울산</item>
+        <item>세종특별자치시</item>
+        <item>경기도</item>
+        <item>강원특별자치도</item>
+        <item>충청북도</item>
+        <item>충청남도</item>
+        <item>경상북도</item>
+        <item>경상남도</item>
+        <item>전북특별자치도</item>
+        <item>전라남도</item>
+        <item>제주도</item>
+    </string-array>
+    <string-array name="areaCode">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+    </string-array>
+    <string-array name="regions2">
+        <item>세부 지역 선택</item>
+        <item>서울</item>
+        <item>경기</item>
+        <item>인천</item>
+        <item>강원</item>
+        <item>제주</item>
+        <item>대전</item>
+        <item>충북</item>
+        <item>충남/세종</item>
+        <item>부산</item>
+        <item>울산</item>
+        <item>경남</item>
+        <item>대구</item>
+        <item>경북</item>
+        <item>광주</item>
+        <item>전남</item>
+        <item>전주/전북</item>
+    </string-array>
+    <string-array name="date">
+        <item>기간 선택</item>
+        <item>1일</item>
+        <item>2일</item>
+        <item>3일</item>
+        <item>4일</item>
+        <item>5일</item>
+        <item>6일</item>
+        <item>1주일</item>
+        <item>2주일</item>
+        <item>1달 이상</item>
+    </string-array>
+    <string-array name="styleTrip">
+        <item>휴양</item>
+        <item>계획적</item>
+        <item>즉흥적</item>
+        <item>관광</item>
+        <item>도시</item>
+        <item>로컬</item>
+        <item>가성비</item>
+    </string-array>
+    <string-array name="styleGuest">
+        <item>청결하면 좋겠어요.</item>
+        <item>시끄럽지 않으면 좋겠어요.</item>
+        <item>사교적이면 좋겠어요.</item>
+        <item>사교적이지 않으면 좋겠어요.</item>
+        <item>서로 공간을 침범하지 않으면 좋겠어요.</item>
+        <item>게스트하우스의 규칙을 잘 지키면 좋겠어요.</item>
+        <item>게스트하우스 경험이 많으면 좋겠어요.</item>
+        <item>비슷한 나이대면 좋겠어요.</item>
+    </string-array>
+    <string-array name="MBTI">
+        <item>MBTI 선택</item>
+        <item>없음</item>
+        <item>ISTJ</item>
+        <item>ISFJ</item>
+        <item>INTJ</item>
+        <item>INFJ</item>
+        <item>ISTP</item>
+        <item>ISFP</item>
+        <item>INTP</item>
+        <item>INFP</item>
+        <item>ESTJ</item>
+        <item>ESFJ</item>
+        <item>ENTJ</item>
+        <item>ENFJ</item>
+        <item>ESTP</item>
+        <item>ESFP</item>
+        <item>ENTP</item>
+        <item>ENFP</item>
+    </string-array>
+    <string-array name="differAge">
+        <item>선호하는 나이차</item>
+        <item>동갑</item>
+        <item>3살 차이 이하</item>
+        <item>5살 차이 이하</item>
+        <item>7살 차이 이하</item>
+        <item>10살 차이 이하</item>
+        <item>무관</item>
+    </string-array>
 </resources>

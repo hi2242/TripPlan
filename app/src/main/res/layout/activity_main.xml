@@ -5,37 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="315dp"
-        android:layout_height="328dp"
-        android:alpha="0.8"
-        android:background="@android:color/transparent"
-        android:translationZ="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196"
-        app:srcCompat="@drawable/tripwoman" />
+    tools:context=".activity.MainActivity">
 
     <TextView
         android:id="@+id/titleForMain2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/font_style"
         android:text="여행 정보가 필요할 때"
-        android:textColor="#2f4f4f"
-        android:textSize="40sp"
+        android:textColor="#000000"
+        android:layout_marginTop="280dp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/titleForMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleForMain"
@@ -44,50 +28,46 @@
         android:fontFamily="@font/font_style"
         android:text="여정"
         android:textColor="#2f4f4f"
-        android:textSize="70sp"
+        android:layout_marginTop="10dp"
+        android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintTop_toBottomOf="@id/titleForMain2" />
 
     <ImageButton
         android:id="@+id/loginButtonForKakao"
-        android:layout_width="380dp"
-        android:layout_height="48dp"
-        android:layout_margin="10dp"
-        android:background="#FFFFFF"
-        android:padding="0dp"
-        android:scaleType="centerCrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#FEE500"
         android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintBottom_toTopOf="@id/loginButtonForAdmin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778"
         app:srcCompat="@drawable/kakao_login_medium_wide" />
 
     <Button
         android:id="@+id/loginButtonForAdmin"
-        android:layout_width="380dp"
-        android:layout_height="48dp"
-        android:layout_margin="10dp"
-        android:background="#DCDCDC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/rounded_button"
         android:text="관리자/기관으로 로그인하기"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         android:elevation="5dp"
-        app:cornerRadius="12px"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
